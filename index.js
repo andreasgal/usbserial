@@ -20,7 +20,6 @@ function find_ep(iface, transferType, direction) {
   return eps[0];
 }
 
-
 function controlTransfer(device, requestType, request, value, index, data_or_length) {
   return new Promise((resolve, reject) => {
     device.controlTransfer(requestType, request, value, index, data_or_length,
@@ -120,10 +119,4 @@ class UsbSerial extends EventEmitter {
   }
 };
 
-let serial = new UsbSerial();
-serial.on('data', data => {
-  console.log('X', data, data.toString());
-});
-serial.on('ready', () => {
-  serial.send(new Buffer('Hello! This is a test for 75 baud which should be pretty slow'));
-});
+module.exports = UsbSerial;
