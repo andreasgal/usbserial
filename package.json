@@ -1,4 +1,10 @@
 {
+  "name": "usbserial",
+  "version": "0.0.1",
+  "description": "Prolific PL2303 USB to serial adapter driver based on libusb",
+  "main": "index.js",
+  "author": "Andreas Gal",
+  "license": "MIT",
   "dependencies": {
     "usb": "^1.2.0"
   }
